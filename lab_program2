@@ -6,13 +6,13 @@ void main()
   int i,j,c,m,k,flag=0;
   
   printf("\nEnter the MAIN string: \n");
-  gets(STR,100,stdin);
+  fgets(STR,100,stdin);
   
   printf("\nEnter a PATTERN string: \n");
-  gets(PAT,100,stdin);
+  fgets(PAT,100,stdin);
   
   printf("\nEnter a REPLACE string: \n");
-  gets(REP,100,stdin);
+  fgets(REP,100,stdin);
   
   i = m = c = j = 0;
   while ( STR[c] != '\0')
