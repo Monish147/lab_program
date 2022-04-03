@@ -165,6 +165,7 @@ int postfix_evaluation()
     //the answer for the postfix expression will be in the stack so we pop at the last
     ans = pop(s1);
     printf("the entered expression value is = %d\n",ans);
+    free(s1);
     return 0;
 }
 
