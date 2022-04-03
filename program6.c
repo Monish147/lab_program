@@ -91,7 +91,7 @@ void display(queue_t* q , unsigned int max)
 }
 
 
-void main()
+int main()
 {
   unsigned int max,choice;
   queue_t* q;
