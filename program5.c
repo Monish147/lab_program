@@ -66,7 +66,7 @@ menu_t menu() {
   }
 
 
-  int  isempty(stack_t* s)
+  bool  isempty(stack_t* s)
   {
      if (s->top == -1)
      {
