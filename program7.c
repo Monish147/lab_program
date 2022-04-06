@@ -104,13 +104,13 @@ header_t* insert(header_t* hdr , int choice)
     {
       node->next_node = hdr->front;
       hdr->front = node;
-      printf("1\n");
+      //printf("1\n");
     }
     else
     {
       hdr->rear->next_node = node;
       hdr->rear = node;
-      printf("0\n");
+      //printf("0\n");
     }
   }
   return hdr;
