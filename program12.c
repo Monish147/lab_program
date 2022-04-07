@@ -9,6 +9,7 @@
 
 #define SIZE_NAME 100
 #define SIZE_HASH 100
+
 typedef struct node {
   int key;
   char name[SIZE_NAME];
@@ -20,7 +21,7 @@ int hashfn(int key) {
 
   return(key%SIZE_HASH);
 }
-
+/*
 // check the next available slot.
 // If none available, return -1
 int quadratic_probe(int curr) {
@@ -39,6 +40,25 @@ int quadratic_probe(int curr) {
  //no empty slot is found
   return -1;
 }
+*/
+//-------------------------------------------------------
+// check the next available slot.
+// If none available, return -1
+int linear_probe(int curr) {
+  int temp = curr;
+  // check for next slot to be free
+  // ensure to roll over
+  temp = (temp + 1) % SIZE_HASH;
+  while(temp != curr) {
+    if(hash[temp].key == 0) {
+      return temp;
+    }
+    temp++;
+  }
+ //no empty slot is found
+ return -1;
+}
+//-------------------------------------------------------
 
 int main(int argc, char* argv[]){
   FILE *fp;
